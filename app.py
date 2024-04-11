@@ -73,7 +73,7 @@ def user_input(user_question):
     return response
 
 def main():
-    st.set_page_config(page_title="Gemini PDF Chatbot", page_icon="🤖")
+    st.set_page_config(page_title="Annual Report Chatbot", page_icon="🤖")
 
     # Sidebar for uploading PDF files
     with st.sidebar:
