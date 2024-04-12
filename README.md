@@ -1,4 +1,6 @@
 # Report Genius
+![Claimy](https://github.com/ayushmokal/AnnualReports_Chatbot/assets/95966154/d9e565ff-f948-4d50-a9d9-29a1f8a66d00)
+
 **Getting Insights Has Never Been So Easy**
 
 Join us in transforming the way stakeholders interact with company’s annual public reports. With Report Genius, accessing critical data points and insights from dense financial documents is quick and efficient.
