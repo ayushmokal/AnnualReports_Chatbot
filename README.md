@@ -59,7 +59,7 @@ Quickly find the specific sections or data points you are interested in within a
 Tailor the information and reports based on your specific needs and interests.
 
 ## Technologies
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white) ![FAISS](https://img.shields.io/badge/FAISS-55A5D9?style=for-the-badge&logo=Facebook&logoColor=white) ![Google Generative AI](https://img.shields.io/badge/Google_Generative_AI-4285F4?style=for-the-badge&logo=Google&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white) ![Google Generative AI](https://img.shields.io/badge/Google_Generative_AI-4285F4?style=for-the-badge&logo=Google&logoColor=white)
 
 ## Acknowledgments
 
