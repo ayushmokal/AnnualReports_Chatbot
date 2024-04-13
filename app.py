@@ -85,7 +85,7 @@ def get_frequently_asked_questions(text):
     return faqs
 
 def main():
-    st.set_page_config(page_title="Gemini PDF Chatbot", page_icon="🤖")
+    st.set_page_config(page_title="Report Genius", page_icon="🤖")
 
     # Sidebar for uploading PDF files
     with st.sidebar:
