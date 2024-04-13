@@ -9,7 +9,8 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains.question_answering import load_qa_chain
 from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv
-import plotly.express as px  # For data visualization
+import textacy
+import textacy.extract
 
 load_dotenv()
 os.getenv("GOOGLE_API_KEY")
@@ -72,6 +73,17 @@ def user_input(user_question):
     print(response)
     return response
 
+def get_frequently_asked_questions(text):
+    # Load spaCy model
+    nlp = textacy.load_spacy_lang("en_core_web_sm")
+    # Set max_length attribute
+    nlp.max_length = 2000000
+    doc = nlp(text)
+    noun_phrases = list(textacy.extract.noun_chunks(doc, drop_determiners=True))
+    num_faqs = min(3, len(noun_phrases))
+    faqs = noun_phrases[:num_faqs]
+    return faqs
+
 def main():
     st.set_page_config(page_title="Gemini PDF Chatbot", page_icon="🤖")
 
@@ -85,6 +97,12 @@ def main():
                 text_chunks = get_text_chunks(raw_text)
                 get_vector_store(text_chunks)
                 st.success("Done")
+                
+                # Get FAQs
+                faqs = get_frequently_asked_questions(raw_text)
+                st.subheader("Frequently Asked Questions:")
+                for i, faq in enumerate(faqs, start=1):
+                    st.write(f"{i}. {faq}")
 
     # Main content area for displaying chat messages
     st.title("Chat with Annual Report files 🤖")
